@@ -19,7 +19,7 @@ const Popular = () => {
       setPopular(JSON.parse(secondTimeLoad));
       console.log('2nd time ... ... ...')
     } else {
-      const response = await fetch(url.urlApiKey);
+      const response = await fetch(url.popular);
       const data = await response.json();
       setPopular(data.recipes);
 
@@ -29,8 +29,8 @@ const Popular = () => {
   }
 
   return (
-    <div className="my-16">
-      <h3 className="text-2xl text-center">Popular Picks</h3>
+    <div className="my-8">
+      <h3 className="text-3xl font-bold text-center">Popular Picks</h3>
       <Splide options={{
         pagination: false,
         drag: 'free',
@@ -57,7 +57,7 @@ const Popular = () => {
         {
           popular.map(recipe => (
             <SplideSlide key={recipe.id}>
-              <div className="min-h-[25rem] p-4 m-2 overflow-hidden relative">
+              <div className="min-h-[20rem] p-4 m-2 overflow-hidden relative">
                 <p className=" text-2xl w-full p-2 bg-white/60 text-black
                   absolute left-1/2 bottom-0 -translate-x-2/4 z-10 text-center rounded-b-[2rem]">
                   {recipe.title}

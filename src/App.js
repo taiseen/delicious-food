@@ -1,15 +1,18 @@
-import { Pages } from './pages';
-
+import { BrowserRouter } from 'react-router-dom';
+import { Category, Popular, Search, Veggie } from './components';
+import { Home, Pages } from './pages';
 
 const App = () => {
+
   return (
     <div className="px-[6%]">
-
-      <Pages />
-
-
+      <BrowserRouter>
+        {/* <Search /> */}
+        <Category />
+        <Pages />
+      </BrowserRouter>
     </div>
   )
 }
 
-export default App
+export default App;

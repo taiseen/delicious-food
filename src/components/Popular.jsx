@@ -17,7 +17,7 @@ const Popular = () => {
 
     if (secondTimeLoad) {
       setPopular(JSON.parse(secondTimeLoad));
-      console.log('2nd time ... ... ...')
+      console.log('2nd time ... ... ... Popular')
     } else {
       const response = await fetch(url.popular);
       const data = await response.json();

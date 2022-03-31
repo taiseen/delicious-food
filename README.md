@@ -13,6 +13,11 @@
     * npx tailwindcss init -p
 
 
+## Learning Context or Implemented Featured 
++ LocalStorage add + clear
++ API calling 
+
+
 ## Source of Data:
 https://spoonacular.com/food-api
 
